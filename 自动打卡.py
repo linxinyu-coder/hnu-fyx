@@ -38,10 +38,11 @@ while True:
         k=0
         while True:
             opt = webdriver.ChromeOptions()
-
+            opt.add_argument('--headless')
             opt.add_experimental_option('w3c',  False)
             browser = webdriver.Chrome(options=opt)
             browser.get('https://fangkong.hnu.edu.cn/app/#/login?redirect=%2Fhome')
+            time.sleep(20)
             browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[1]/input').send_keys('202001130911')
             browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[2]/input').send_keys('Yusiang201314')
             browser.implicitly_wait(2)
@@ -86,7 +87,7 @@ while True:
                 browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[3]/div/input').send_keys(a)
                 time.sleep(3)
                 browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/button').click()
-                time.sleep(2)
+                time.sleep(20)
                 n=n+1
                 if n>20:
                     browser.close()
@@ -123,7 +124,7 @@ while True:
         ###网页跳转
         eorror=eorror+1########################################3
         time.sleep(1)
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div[2]/div[2]').click()
+        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div[2]').click()
 
         time.sleep(1)
         eorror=eorror+1###################################4
@@ -138,15 +139,12 @@ while True:
         browser.find_element_by_xpath('/html/body/div[1]/div/div[5]/div/div[1]/button[2]').click()
         time.sleep(2)
         eorror=eorror+1#####################################6
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[2]/div[3]/div[2]/div/input').send_keys('湖南大学')
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[3]/div[2]/div[2]').click()
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[4]/div[2]/div[1]').click()
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[5]/div[2]/div[2]').click()
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[6]/div[2]/div[2]').click()
-        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/div[7]/div[2]/div[2]').click()
+        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div[2]/div/input').send_keys('湖南大学')
+        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[2]/div[3]/div/div[2]/div[2]/input').send_keys('36.5')
+        browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[2]/div[3]/div/div[3]/div[2]/input').send_keys('36.5')
         eorror=eorror+1########################################7
         time.sleep(2)
-        doc = browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/button')
+        doc = browser.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div/div[1]/div/div/div/div[2]/button')
         TouchActions(browser).tap(doc).perform()
         eorror=eorror+1########################################8
         mail_server = "smtp.126.com"
