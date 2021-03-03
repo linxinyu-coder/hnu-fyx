@@ -5,7 +5,7 @@ name: hnu
 
 on: 
   schedule:
-    - cron: " 0 18 * * 0-6"
+    - cron: " 0 19 * * 0-6"
 
 jobs:
   start:
