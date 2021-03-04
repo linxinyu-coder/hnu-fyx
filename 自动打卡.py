@@ -28,7 +28,7 @@ while True:
             browser.get('https://fangkong.hnu.edu.cn/app/#/login?redirect=%2Fhome')
             time.sleep(20)
             browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[1]/input').send_keys('202001130911')
-            browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[2]/input').send_keys('Yusiang201314')
+            browser.find_element_by_xpath('/html/body/div[1]/div/div[3]/div[2]/input').send_keys('Yuxiang201314')
             browser.implicitly_wait(2)
             currentPageUrl = browser.current_url
             eorror=eorror+1################################################1
